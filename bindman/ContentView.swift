@@ -166,7 +166,7 @@ struct ContentView: View {
 
                         }
                         else if mode == "隨機加入"{
-                            HStack {
+//                            HStack {
 //                                ForEach(0 ..< itemAmount, id: \.self){_ in//要加id.self
 //                                    
 //                                    Image("hp")
@@ -176,15 +176,18 @@ struct ContentView: View {
 //                                        .foregroundColor(.red)
 //                                        .offset(x: CGFloat.random(in: -100...100), y: CGFloat.random(in: -100...100))
 //                                }
-                                
-                                
-                            }
-                            ForEach(0 ..< 10, id: \.self){i in//要加id.self
-                                Text(displayList[i].emoji)
-                                    .font(.system(size: 40))
+//                                
+//                                
+//                            }
+                            ZStack{
+                                ForEach(0 ..< 10, id: \.self){i in//要加id.self
+                                    Text(displayList[i].emoji)
+                                        .font(.system(size: 40))
 
-                                    .offset(x: displayList[i].emojix, y: displayList[i].emojiy)
+                                        .offset(x: displayList[i].emojix, y: displayList[i].emojiy)
+                                }
                             }
+                            
                         }
                         if showcCaption{
                             Text(caption)
